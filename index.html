@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <link rel="stylesheet" href="css/framework7.css">
+    <link rel="stylesheet" href="css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="css/my-app.css">
+</head>
+
+<body>
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Views-->
+    <div class="views">
+        <!-- Your main view, should have "view-main" class-->
+        <div class="view view-main">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a href="all_message.html" class="link">所有消息</a>
+                        <span class="unread-tip"></span>
+                    </div>
+                    <div class="center sliding">Me2</div>
+                    <div class="right sliding">
+                        <a href="profile.html" class="link">个人主页</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+            <div class="pages navbar-through toolbar-through">
+                <!-- Page, data-page contains page name-->
+                <div data-page="index" class="page">
+                    <div class="page-content entry-page">
+                        <div class="content-block card-wrap">
+                            <div class="content-block-inner card" style="display:none;">
+                                <a href="" class="button active refresh">换人</a>
+                                <div class="row no-gutter user-panel">
+                                    <div class="col-33">
+                                        <img class="user-avatar" src="" width="60" height="60" alt="">
+                                    </div>
+                                    <div class="col-66">
+                                        <div class="user-name"></div>
+                                        <div class="user-info">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="resemble-board">
+                                    <div class="same">
+                                        <span>共同点</span>
+                                        <span class="same-face-count"></span>
+                                    </div>
+                                    <div class="un-same">
+                                        <span>不同点</span>
+                                        <span class="diff-face-count"></span>
+                                    </div>
+                                </div>
+                                <div class="slider-custom">
+                                    <div class="slider-container">
+                                        <div class="slider-wrapper">
+                                           <!-- 填充 slide --> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                         
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="popup add-point-panel">
+        <p><a href="" class="close-popup">[ 关闭 ]</a> 
+        </p>
+        <div class="list-block inset">
+            <ul>
+                <li>
+                    <div class="item-content">
+                        <div class="item-inner">
+                            <div class="item-input">
+                                <input class="point-inp" type="text" name="new-point" placeholder="用一个词来描述你的某一面">
+                            </div>
+                            <div class="item-title label">
+                                <a href="" class="button active add-point-btn close-popup">添加</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content-block-title">推荐热门描述</div>
+        <div class="list-block hot-point-list inset">
+            <ul>
+                <!-- Point.get_hots() -->
+            </ul>
+        </div>
+    </div>
+    <div class="popup popup-login-first">
+        <div class="popup-hd">
+            <a href="" data-popup=".popup-login-last" class="open-popup link-login-next btn-text">下一步</a>
+        </div>
+        <form id="login-first-form" class="list-block store-data">
+            <ul>
+                <li>
+                    <div class="item-content item-my-avatar">
+                        <div class="item-inner">
+                            <div class="item-title label">头像</div>
+                            <div class="item-input  upload-item-wrap">
+                                <img class="img-preview" id="my-avatar-preview" src="/img/default_avatar.png" alt="">
+                                <div class="upload-btn camera">
+                                    <a class="" href="javascript:void(0);"></a>                              
+                                    <input id="upload-avatar" name="my-avatar" type="file" value="上传">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title label">名字</div>
+                            <div class="item-input">
+                                <input name="my-name" type="text" placeholder="请输入你的名字">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title label">性别</div>
+                            <div class="item-input">
+                                <select name="my-gender">
+                                    <option>男</option>
+                                    <option>女</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title label">年龄</div>
+                            <div class="item-input">
+                                <input name="my-age" type="text" placeholder="请输入你的年龄">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title label">城市</div>
+                            <div class="item-input">
+                                <input name="my-city" type="text" placeholder="请输入你的城市" value="北京">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </form>
+        
+    </div>
+    <div class="popup popup-login-last">
+        <div class="popup-hd">
+           <a href="" data-popup=".popup" class="close-popup btn-text finish-login">开始体验</a>
+        </div>
+        <div class="content-block-title">下面哪些词能够代表你？</div>
+        <form id='login-last-form' class="list-block">
+            <ul id="init-hot-point-list">
+                <!-- load hot point -->
+            </ul>
+        </form>
+        
+    </div>
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <script src="js/zepto.min.js"></script>
+    <!--
+    <script src="js/swiper.old.js"></script>
+    <script src="js/handlebars-v1.3.0.js"></script>
+    -->
+    <script src="https://cn.avoscloud.com/scripts/lib/av-0.3.4.min.js"></script>
+    <script>
+    //Me3
+    AV.initialize("m3b0iyz37btgivoonj443a75y62qgacqh0nyiv2bh4q7jbmv", "syzzpuir750a8c8v5kb7rotmh7bexgc36rlrvb1xvrlvoc5k");
+    //Me2
+    //AV.initialize("k4ny0aetj7cdk3x6wr3fz40hw4hg3n7ycfu2va9pdc1vhvwm", "epj8ggza12c9v86pgsnp0rgmgdhos6xd80kpccmhbxlg0s3p");
+    </script>
+    <script src="js/data.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+</body>
+
+</html>

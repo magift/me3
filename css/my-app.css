@@ -1,0 +1,553 @@
+/* line 3, ../src/css/my-app.scss */
+.col-66 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* line 7, ../src/css/my-app.scss */
+.card-wrap .card .user-panel .user-name, .card-wrap .slider-custom .story-panel .story-hd .left-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* line 12, ../src/css/my-app.scss */
+.extend
+.user-name {
+  padding-right: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* line 18, ../src/css/my-app.scss */
+.popup-login-first .link-login-next, .popup-login-last .finish-login {
+  display: inline-block;
+  font-size: 13px;
+}
+
+/* line 22, ../src/css/my-app.scss */
+.unread-tip {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background: red;
+  display: inline-block;
+  opacity: 0;
+}
+
+/* line 30, ../src/css/my-app.scss */
+.upload-item-wrap {
+  position: relative;
+  padding: 25px 0 10px 0;
+}
+
+/* line 34, ../src/css/my-app.scss */
+.upload-btn {
+  display: inline-block;
+  position: absolute;
+  width: 80px;
+  height: 30px;
+  overflow: hidden;
+  text-align: center;
+}
+/* line 41, ../src/css/my-app.scss */
+.upload-btn a {
+  font-size: 13px !important;
+}
+/* line 44, ../src/css/my-app.scss */
+.upload-btn input[type=file] {
+  top: 0;
+  left: 0;
+  position: absolute;
+  opacity: 0;
+  font-size: 100px;
+}
+
+/* line 52, ../src/css/my-app.scss */
+.camera {
+  top: 25px;
+  left: 0;
+  width: 60px;
+  height: 60px;
+}
+/* line 57, ../src/css/my-app.scss */
+.camera a {
+  text-indent: 9999px;
+}
+
+/* line 61, ../src/css/my-app.scss */
+.card {
+  position: relative;
+}
+
+/* line 64, ../src/css/my-app.scss */
+.card-hide {
+  left: -9999px;
+  top: -99999px;
+}
+
+/* line 68, ../src/css/my-app.scss */
+.removed {
+  -webkit-animation: disapear 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation: disappear 1s;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes disapear {
+  /* line 75, ../src/css/my-app.scss */
+  50% {
+    -webkit-transform: translateX(3%);
+    transform: translate(3%);
+  }
+
+  /* line 79, ../src/css/my-app.scss */
+  100% {
+    -webkit-transform: translateX(-200%);
+    transform: translateX(-200%);
+  }
+}
+
+@keyframes disapear {
+  /* line 86, ../src/css/my-app.scss */
+  50% {
+    -webkit-transform: translateX(3%);
+    transform: translate(3%);
+  }
+
+  /* line 90, ../src/css/my-app.scss */
+  100% {
+    -webkit-transform: translateX(-200%);
+    transform: translateX(-200%);
+  }
+}
+
+/* line 96, ../src/css/my-app.scss */
+.navbar a.link:active {
+  opacity: 1 !important;
+}
+
+/* line 97, ../src/css/my-app.scss */
+.entry-page {
+  overflow: hidden;
+}
+
+/* line 100, ../src/css/my-app.scss */
+.card-wrap {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 10px 0 10px;
+  padding: 0 15px;
+  height: 92%;
+}
+/* line 105, ../src/css/my-app.scss */
+.card-wrap .card {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+/* line 109, ../src/css/my-app.scss */
+.card-wrap .card .refresh {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+}
+/* line 114, ../src/css/my-app.scss */
+.card-wrap .card .user-panel {
+  padding: 0 0 0 0;
+}
+/* line 116, ../src/css/my-app.scss */
+.card-wrap .card .user-panel .col-66 {
+  padding-right: 60px;
+}
+/* line 125, ../src/css/my-app.scss */
+.card-wrap .resemble-board {
+  padding: 8px 0;
+  margin: 0 0 5px 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+/* line 131, ../src/css/my-app.scss */
+.card-wrap .resemble-board .same, .card-wrap .resemble-board .un-same {
+  display: inline-block;
+  padding: 0 10px;
+  text-align: center;
+}
+/* line 136, ../src/css/my-app.scss */
+.card-wrap .resemble-board .same {
+  border-right: 1px solid #555;
+}
+/* line 140, ../src/css/my-app.scss */
+.card-wrap .slider-custom {
+  position: relative;
+  width: 98%;
+  height: 78%;
+}
+/* line 144, ../src/css/my-app.scss */
+.card-wrap .slider-custom .slider-container {
+  overflow: visible;
+}
+/* line 147, ../src/css/my-app.scss */
+.card-wrap .slider-custom .story-wrap {
+  margin: 8px 0;
+  text-align: center;
+}
+/* line 151, ../src/css/my-app.scss */
+.card-wrap .slider-custom .slider-slide {
+  position: relative;
+}
+/* line 154, ../src/css/my-app.scss */
+.card-wrap .slider-custom .story-img {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+/* line 159, ../src/css/my-app.scss */
+.card-wrap .slider-custom .lock-mask {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  transition: opacity 1s;
+}
+/* line 168, ../src/css/my-app.scss */
+.card-wrap .slider-custom .disappear {
+  opacity: 0;
+}
+/* line 171, ../src/css/my-app.scss */
+.card-wrap .slider-custom .story-panel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 55%;
+  z-index: 4;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.3) -1px -1px 5px inset, rgba(255, 255, 255, 0.5) 2px 2px 10px inset;
+  -moz-box-shadow: rgba(255, 255, 255, 0.3) -1px -1px 5px inset, rgba(255, 255, 255, 0.5) 2px 2px 10px inset;
+  box-shadow: rgba(255, 255, 255, 0.3) -1px -1px 5px inset, rgba(255, 255, 255, 0.5) 2px 2px 10px inset;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+/* line 182, ../src/css/my-app.scss */
+.card-wrap .slider-custom .story-panel:before {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-filter: blur(3px);
+  content: '';
+}
+/* line 193, ../src/css/my-app.scss */
+.card-wrap .slider-custom .story-panel .story-hd {
+  position: relative;
+  z-index: 10;
+  padding: 5px 10px;
+  background: rgba(250, 93, 79, 0.8);
+}
+/* line 198, ../src/css/my-app.scss */
+.card-wrap .slider-custom .story-panel .story-hd .point {
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 29px;
+}
+/* line 203, ../src/css/my-app.scss */
+.card-wrap .slider-custom .story-panel .story-hd a.btn-text {
+  color: #fff;
+  font-size: 15px;
+  border: 1px solid #fff;
+  padding: 4px 10px;
+  border-radius: 3px;
+  line-height: 29px;
+}
+/* line 211, ../src/css/my-app.scss */
+.card-wrap .slider-custom .story-panel .story-hd a.icon-btn {
+  color: #fff;
+}
+/* line 213, ../src/css/my-app.scss */
+.card-wrap .slider-custom .story-panel .story-hd a.icon-btn .iconfont {
+  font-size: 20px;
+}
+/* line 217, ../src/css/my-app.scss */
+.card-wrap .slider-custom .story-panel .story-hd .left-title, .card-wrap .slider-custom .story-panel .story-hd .right-act {
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 30px;
+}
+/* line 222, ../src/css/my-app.scss */
+.card-wrap .slider-custom .story-panel .story-hd .left-title .icon, .card-wrap .slider-custom .story-panel .story-hd .right-act .icon {
+  margin-top: -4px;
+}
+/* line 226, ../src/css/my-app.scss */
+.card-wrap .slider-custom .story-panel .story-hd .left-title {
+  width: 65%;
+}
+/* line 231, ../src/css/my-app.scss */
+.card-wrap .slider-custom .story-panel .story-hd .right-act {
+  width: 30%;
+  text-align: right;
+}
+/* line 236, ../src/css/my-app.scss */
+.card-wrap .slider-custom .story-panel .story-bd {
+  position: relative;
+  z-index: 5;
+  padding: 10px 10px;
+  color: #555;
+  min-height: 40px;
+}
+/* line 245, ../src/css/my-app.scss */
+.card-wrap .slider-prev-button, .card-wrap .slider-next-button {
+  position: absolute;
+  width: 44px;
+  background: rgba(122, 134, 123, 0.7);
+  top: 50%;
+  margin-top: -22px;
+  line-height: 44px;
+  text-align: center;
+}
+/* line 254, ../src/css/my-app.scss */
+.card-wrap .slider-prev-button {
+  left: 0;
+}
+/* line 257, ../src/css/my-app.scss */
+.card-wrap .slider-next-button {
+  right: 0;
+}
+
+/* line 262, ../src/css/my-app.scss */
+.navbar-through .entry-page {
+  padding-bottom: 0;
+}
+
+/* line 266, ../src/css/my-app.scss */
+.user-panel .user-name {
+  margin: 10px 0 7px 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+/* line 272, ../src/css/my-app.scss */
+.user-panel .user-info .iconfont {
+  font-size: 14px;
+}
+/* line 276, ../src/css/my-app.scss */
+.user-panel .user-info span {
+  padding: 0 10px;
+  border-left: 1px solid #ddd;
+}
+/* line 280, ../src/css/my-app.scss */
+.user-panel .user-info span:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+/* line 284, ../src/css/my-app.scss */
+.user-panel .user-avatar {
+  border-radius: 60px;
+}
+
+/* line 289, ../src/css/my-app.scss */
+.profile-page .content-block {
+  margin: 20px 0;
+}
+/* line 292, ../src/css/my-app.scss */
+.profile-page .media-list {
+  margin-top: 0;
+}
+/* line 296, ../src/css/my-app.scss */
+.profile-page .point-list .item-after {
+  font-size: 13px;
+  line-height: 23px;
+}
+/* line 300, ../src/css/my-app.scss */
+.profile-page .point-list img {
+  border-radius: 4px;
+}
+/* line 303, ../src/css/my-app.scss */
+.profile-page .point-list .item-title {
+  font-size: 15px;
+}
+/* line 306, ../src/css/my-app.scss */
+.profile-page .point-list .item-text {
+  font-size: 13px;
+}
+
+/* line 313, ../src/css/my-app.scss */
+.add-point-panel p {
+  text-align: right;
+  padding-right: 20px;
+}
+/* line 317, ../src/css/my-app.scss */
+.add-point-panel .point-inp {
+  font-size: 15px !important;
+}
+/* line 320, ../src/css/my-app.scss */
+.add-point-panel .list-block .item-title.label {
+  width: 25%;
+}
+/* line 323, ../src/css/my-app.scss */
+.add-point-panel .hot-point-list {
+  max-height: 60%;
+  overflow-y: scroll;
+  margin-top: 40px;
+}
+/* line 327, ../src/css/my-app.scss */
+.add-point-panel .hot-point-list .item-title {
+  font-size: 14px;
+}
+
+/* line 334, ../src/css/my-app.scss */
+.edit-story-page textarea {
+  font-size: 14px;
+  margin-top: 10px;
+}
+/* line 338, ../src/css/my-app.scss */
+.edit-story-page .edit-block {
+  margin: 20px 0;
+}
+/* line 341, ../src/css/my-app.scss */
+.edit-story-page .upload-story-pic-btn {
+  top: 10px;
+  left: 0;
+  width: 150px;
+  height: 150px;
+}
+/* line 347, ../src/css/my-app.scss */
+.edit-story-page .story-pic-wrap {
+  position: relative;
+}
+
+/* line 352, ../src/css/my-app.scss */
+.messages-page .list-block {
+  margin: 10px 0;
+}
+/* line 355, ../src/css/my-app.scss */
+.messages-page .item-media {
+  width: 55px;
+}
+/* line 358, ../src/css/my-app.scss */
+.messages-page .m_time {
+  float: right;
+}
+
+/* line 362, ../src/css/my-app.scss */
+.chat-page {
+  padding-bottom: 100px !important;
+}
+/* line 364, ../src/css/my-app.scss */
+.chat-page .message-story {
+  background: #fafafa;
+  width: 200px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px 7px;
+  margin: 0 20px 0;
+  position: relative;
+  height: 62px;
+}
+/* line 373, ../src/css/my-app.scss */
+.chat-page .message-story p {
+  margin: 0;
+  color: #aaa;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+/* line 381, ../src/css/my-app.scss */
+.chat-page .message-story img {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+/* line 386, ../src/css/my-app.scss */
+.chat-page .message-story div {
+  position: absolute;
+  left: 50px;
+  top: 10px;
+  width: 140px;
+}
+
+/* line 394, ../src/css/my-app.scss */
+.story-preview-wrap {
+  bottom: 44px;
+  left: 0;
+  right: 0;
+  height: 35%;
+  position: absolute;
+  z-index: 999;
+  padding: 10px 15px;
+  background: rgba(255, 239, 238, 0.8);
+  border: 1px solid #feccc8;
+  border-bottom: 0;
+}
+/* line 405, ../src/css/my-app.scss */
+.story-preview-wrap .current-story {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+/* line 408, ../src/css/my-app.scss */
+.story-preview-wrap .current-story img {
+  float: left;
+  margin-right: 10px;
+}
+/* line 412, ../src/css/my-app.scss */
+.story-preview-wrap .current-story .tiny-point-name {
+  line-height: 46px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+/* line 418, ../src/css/my-app.scss */
+.story-preview-wrap .tiny-story-text {
+  color: #555;
+}
+
+/* line 424, ../src/css/my-app.scss */
+.popup-login-first .link-login-next {
+  margin: 0 0 0 20px;
+}
+/* line 429, ../src/css/my-app.scss */
+.popup-login-first .item-my-avatar img {
+  width: 55px;
+  height: 55px;
+}
+
+/* line 436, ../src/css/my-app.scss */
+.popup-login-last #login-last-form {
+  height: 74%;
+  overflow-y: auto;
+}
+/* line 440, ../src/css/my-app.scss */
+.popup-login-last .finish-login {
+  margin: 0 0 0 20px;
+}
+
+/* line 445, ../src/css/my-app.scss */
+input::-webkit-input-placeholder {
+  font-size: 14px;
+}
+
+/* line 448, ../src/css/my-app.scss */
+.popup-hd {
+  background: #fb7468;
+  padding: 8px 13px;
+  text-align: right;
+}
+/* line 452, ../src/css/my-app.scss */
+.popup-hd a.btn-text {
+  color: #fff;
+  font-size: 16px;
+}
+
+/* line 457, ../src/css/my-app.scss */
+.no-story {
+  padding: 20px 10px;
+  color: #ddd;
+}
