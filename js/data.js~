@@ -183,18 +183,25 @@ var Face = AV.Object.extend("Face", {
     unlock: function(user, face, succ_func) {
         var user_from = user;
         var user_to = face.get('user');
-        UnlockedFace.add(face, user, function(){
-            Chance.add(user_to, user_from);
-            // TODO  一次是写死的！
-            succ_func && succ_func(face, '你还有1次解锁机会');
-            console.log(face.get('point'));
-            Point.get_by_id(face.get('point').id, function(point){
-                Me2er.get_by_id(face.get('user').id, function(user_to){
-                Message.send_sys_msg(user_from , user_to, user_from.get('name') + '解锁了' + user_to.get('name') + '的' + point.get('name'));
+
+        Chance.get_by_user(user_from, user_to, function(count){
+            if(count <= 0) {
+                succ_func && succ_func(null, '你没有解锁机会了');
+            }
+            else {
+                UnlockedFace.add(face, user, function(){
+                    Chance.add(user_to, user_from);
+                    succ_func && succ_func(face, '你还有'+ count.toString() +'次解锁机会');
+                    console.log(face.get('point'));
+                    Point.get_by_id(face.get('point').id, function(point){
+                        Me2er.get_by_id(face.get('user').id, function(user_to){
+                        Message.send_sys_msg(user_from , user_to, user_from.get('name') + '解锁了' + user_to.get('name') + '的' + point.get('name'));
+                        })
+                    });
+                    // ##TODO 同时把对方挪出队列
                 })
-            });
-            // ##TODO 同时把对方挪出队列
-        })
+            }
+        });
     },
     remove: function() {}
 });
@@ -391,14 +398,15 @@ var Me2er = AV.Object.extend("Me2er", {
     change_user: function(succ_func) {
         // TOTO 暂时只是简单随机
         var query = new AV.Query(Me2er);
-        //console.log(this.get('name'));
+        var user_from = this;
         query.notEqualTo('name', this.get('name'));
         query.find({
             success: function(users) {
                 var rand = parseInt(Math.random()*users.length);
-                //TODO 写死了
-                //如果没有
-                succ_func(users[rand], '你有2次解锁机会');                
+                var user_to = users[rand];
+                Chance.get_by_user(user_from, user_to, function(count){
+                    succ_func(user_to, '你有' + count.toString() + '次解锁机会');;                
+                })
             }
         });
     },
