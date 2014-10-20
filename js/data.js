@@ -16,7 +16,7 @@ var Point = AV.Object.extend("Point", {
         query.equalTo('name', name);
         return query.find({
             success: function(results) {
-                if (results.length) {
+                if (results.length > 0) {
                     return succ_func && succ_func(results[0]);
                 }
                 else {

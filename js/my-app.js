@@ -321,7 +321,7 @@ $('.add-point-btn').on('click', function(e) {
 
     if (point_name.length > 0) {
         Point.add(point_name, function(point){
-            Face.add(me2er, point, function(face){
+            Face.add(av_current_user, point, function(face){
                 console.log('is first ' + face.get('first_add') );
                 if (face.get('first_add')) {
                     addFaceItem(face.id, point_name);
